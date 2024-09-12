@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+.bold-text {
+  font-weight: bold;
+  font-size: 64px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.light-text {
+  font-weight: lighter;
+  font-size: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.large-label {
+  font-size: 28px;
+  font-weight: lighter;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.large-input {
+  font-size: 18px !important;
+  padding: 10px;
+  height: auto;
+}
+
+.text-container {
+  height:600px;
+  background-color: #e3e2e1;
+  border-radius: 25px;
+  padding:20px;
+}
+
+.inner-text-container {
+  height: 100%;
+  width: 95%;
+  overflow: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.text-container-text {
+  align-self: flex-start;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+.rainbow-button-text {
+  text-decoration:none;
+  color:#000;
+}
+
+.rainbow-button {
+  width:calc(180px + 8px);
+  height:calc(40px + 8px);
+  background-image: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+  border-radius:25px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:16px;
+  font-weight:normal;
+}
+.rainbow-button:after {
+  content:attr(alt);
+  width:180px;
+  height:40px;
+  background-color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:22px
+}
+.rainbow-button:hover {
+  animation:slidebg 2s linear infinite;
+}
+
+@keyframes slidebg {
   to {
-    transform: rotate(360deg);
+    background-position:20vw;
   }
 }
