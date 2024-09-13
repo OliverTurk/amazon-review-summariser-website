@@ -21,7 +21,7 @@ function App() {
     const token = 'e654f66c30ae20d87cb742ddd6d8553d19618c64'; 
 
     try {
-      const response = await fetch(`http://3.230.216.78/reviewsummariser/summary/?url=${url}`, {
+      const response = await fetch(`https://oliverturkreviewsummariser.com/reviewsummariser/summary/?url=${url}`, {
         method: 'GET',
         headers: {
             'Authorization': `Token ${token}`, // Add the Authorization header
