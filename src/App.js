@@ -18,8 +18,16 @@ function App() {
     setError(null);
     setData(null);
 
+    const token = 'e654f66c30ae20d87cb742ddd6d8553d19618c64'; 
+
     try {
-      const response = await fetch(`http://98.83.54.147:8000/reviewsummariser/summary/?url=${url}`)
+      const response = await fetch(`http://3.230.216.78/reviewsummariser/summary/?url=${url}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': `Token ${token}`, // Add the Authorization header
+            'Content-Type': 'application/json'
+        }
+      });
       if (!response.ok) {
         const errorData = await response.json();
         throw new Error(errorData.error || 'something went wrong');
